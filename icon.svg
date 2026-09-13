@@ -1,6 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <!-- 占位图标:主题基线(阶段1-2)定稿后重绘 -->
-  <rect width="512" height="512" rx="96" fill="#fdf6ec" />
-  <rect x="16" y="16" width="480" height="480" rx="80" fill="none" stroke="#2b2118" stroke-width="24" />
-  <text x="256" y="330" font-size="220" text-anchor="middle">🎲</text>
+  <!-- 应用图标:贴纸基线(粉底+粗描边+硬投影),方向 D 卡牌扇(lab 展品定稿) -->
+  <rect width="512" height="512" rx="96" fill="#ff5d8f" />
+  <g transform="translate(256 256) scale(1.22) translate(-256 -256) rotate(8 256 256)">
+    <g transform="translate(196 118) rotate(16 90 125)">
+      <rect width="180" height="250" rx="28" fill="#0ea5e9" stroke="#2b2118" stroke-width="20" />
+    </g>
+    <g transform="translate(136 140) rotate(-8 90 125)">
+      <rect x="12" y="12" width="180" height="250" rx="28" fill="#2b2118" />
+      <rect width="180" height="250" rx="28" fill="#fffdf6" stroke="#2b2118" stroke-width="20" />
+      <path
+        d="M90 62l14.4 30.6 33.8 4.9-24.4 23.8 5.7 33.6-29.5-15.5-29.5 15.5 5.7-33.6-24.4-23.8 33.8-4.9z"
+        fill="#f59e0b" stroke="#2b2118" stroke-width="12" stroke-linejoin="round" />
+    </g>
+  </g>
 </svg>

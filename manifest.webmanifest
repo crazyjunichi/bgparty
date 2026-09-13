@@ -1,6 +1,6 @@
 {
-  "name": "BGParty",
-  "short_name": "BGParty",
+  "name": "桌游趴 BGParty",
+  "short_name": "桌游趴",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
