@@ -1,0 +1,1 @@
+function e(e,t){let n=e+Math.imul(t,1831565813)|0;return n=Math.imul(n^n>>>15,1|n),n=n+Math.imul(n^n>>>7,61|n)^n,((n^n>>>14)>>>0)/4294967296}function t(t,n,r){return Math.floor(e(t,n)*r)}export{t as n,e as t};
