@@ -1,0 +1,1 @@
+var e=`bgparty:coffeeroaster`,t=null;function n(){if(t)return t.best;try{let n=localStorage.getItem(e);if(n)return t={best:JSON.parse(n).best??0},t.best}catch{}return t={best:0},0}function r(r){let i=r>n();if(i){t={best:r};try{localStorage.setItem(e,JSON.stringify(t))}catch{}}return i}export{r as n,n as t};

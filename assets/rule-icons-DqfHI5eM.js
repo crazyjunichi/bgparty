@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-Cx0BB4qO.js";import{t}from"./icons-AW6vhUQl.js";var n=e(),r=e=>({size:r})=>(0,n.jsx)(t,{drop:e,size:r}),i={wood:r(`wood`),clay:r(`clay`),stone:r(`stone`),reed:r(`reed`),grain:r(`grain`),veg:r(`veg`),food:r(`food`),sheep:r(`sheep`),boar:r(`boar`),cattle:r(`cattle`)};export{i as RULE_ICONS};

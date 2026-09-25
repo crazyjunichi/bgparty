@@ -1,0 +1,1 @@
+import{d as e,o as t,r as n}from"./schemas-C_N5t35k.js";var r=1e3,i=[`#1c1917`,`#dc2626`,`#ea580c`,`#eab308`,`#16a34a`,`#0284c7`,`#7c3aed`,`#db2777`],a=[8,16,32],o=e({c:t().min(0).max(i.length-1),w:t().min(0).max(a.length-1),pts:n(t().min(0).max(r)).min(2).max(1e3).refine(e=>e.length%2==0,`pts 必须是 x,y 点对`)});export{o as i,i as n,a as r,r as t};

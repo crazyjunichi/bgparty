@@ -1,0 +1,1 @@
+var e={red:`#dc2626`,blue:`#2563eb`},t={red:`games.codenames.red`,blue:`games.codenames.blue`},n={red:`#dc2626b3`,blue:`#2563ebb3`,neutral:`#57534e59`,assassin:`#000000e6`},r={red:`text-white`,blue:`text-white`,neutral:`bg-ink/15 text-ink/60`,assassin:`bg-black text-white`};export{n as i,e as n,t as r,r as t};

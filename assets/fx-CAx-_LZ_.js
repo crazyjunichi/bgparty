@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-Cx0BB4qO.js";import{i as t}from"./primitives-C-bHfBBQ.js";var n=e(),r={setup(){return null},place(e,r){let i=e.rid?r.anchor(`seat:${e.rid}`):null;return i?{ms:600,node:(0,n.jsx)(t,{at:i,ms:600})}:null},win(e,r){let i=e.rid?r.anchor(`seat:${e.rid}`):null;return i?{ms:900,node:(0,n.jsx)(t,{at:i,ms:900})}:null}};export{r as cryptidFx};

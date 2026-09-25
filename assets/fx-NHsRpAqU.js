@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-Cx0BB4qO.js";import{t}from"./confetti-CYp5TKfB.js";var n=e(),r={solve(){return{ms:1800,node:(0,n.jsx)(t,{})}}};export{r as brainsFx};

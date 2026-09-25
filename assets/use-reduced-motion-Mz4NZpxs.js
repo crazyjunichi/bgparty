@@ -1,0 +1,1 @@
+import{i as e}from"./jsx-runtime-Cx0BB4qO.js";import{t}from"./react-3BKWdGy3.js";var n=e(t(),1),r=`(prefers-reduced-motion: reduce)`;function i(){return(0,n.useSyncExternalStore)(e=>{let t=window.matchMedia(r);return t.addEventListener(`change`,e),()=>t.removeEventListener(`change`,e)},()=>window.matchMedia(r).matches)}export{i as t};

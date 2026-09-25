@@ -1,0 +1,1 @@
+var e=Array.from({length:32},(e,t)=>`avatars/${t}.webp`);export{e as t};

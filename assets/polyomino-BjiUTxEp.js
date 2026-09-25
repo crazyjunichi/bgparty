@@ -1,0 +1,1 @@
+function e(e,t,n){let r=[];for(let t=0;t<e.length;t++)for(let n=0;n<e[t].length;n++)e[t][n]&&r.push([n,t]);if(n){let e=Math.max(...r.map(e=>e[0]))+1;r=r.map(([t,n])=>[e-1-t,n])}for(let e=0;e<t;e++){let e=Math.max(...r.map(e=>e[1]))+1;r=r.map(([t,n])=>[e-1-n,t])}return r}export{e as t};
