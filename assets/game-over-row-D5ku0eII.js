@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-Cx0BB4qO.js";import{i as t}from"./i18n-ZLBjNLmV.js";var n=e();function r({public:e,rid:r}){let i=t(),a=e.players.find(e=>e.rid===r);return a?(0,n.jsx)(`div`,{className:`mt-1 font-mono text-xs tabular-nums text-ink-soft`,children:i(`games.lasvegas-royale.notesLine`,{n:a.notes+a.chips})}):null}export{r as LasVegasRoyaleGameOverRow};
