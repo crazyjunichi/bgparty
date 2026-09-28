@@ -1,1 +1,0 @@
-function e(e,t){return{x:e.x+t*e.pitch,y:e.y,w:e.w,h:e.h}}function t(t){return Array.from({length:t.count},(n,r)=>e(t,r))}export{t as n,e as t};
