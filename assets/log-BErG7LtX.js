@@ -1,0 +1,1 @@
+var e=performance.now();function t(t,n,r){console.debug(`[bgparty:${t}]`,n,{atMs:Date.now(),pageMs:Math.round(performance.now()-e),...r})}function n(t,n,r){console.debug(`[bgparty:${t}] ${n} ${JSON.stringify({atMs:Date.now(),pageMs:Math.round(performance.now()-e),...r})}`)}export{n,t};
