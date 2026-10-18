@@ -1,1 +1,0 @@
-import{n as e}from"./game-fakeartist-Cfoo1yuI.js";export{e as fakeartist};

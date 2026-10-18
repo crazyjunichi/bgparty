@@ -1,1 +1,0 @@
-import{n as e}from"./game-toybattle-iVaZkYWK.js";export{e as ToyBattleOptions};

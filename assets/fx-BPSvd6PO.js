@@ -1,1 +1,0 @@
-import{n as e}from"./game-magicalathlete-BLJD_qvP.js";export{e as magicalathleteFx};

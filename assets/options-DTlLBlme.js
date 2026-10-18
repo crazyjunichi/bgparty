@@ -1,1 +1,0 @@
-import{a as e}from"./game-amanite-BdBt5HFS.js";export{e as AmaniteOptions};

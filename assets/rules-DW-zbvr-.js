@@ -1,1 +1,0 @@
-import{s as e}from"./game-firstrat-Dlx_VE-m.js";export{e as firstrat};

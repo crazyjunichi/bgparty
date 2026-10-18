@@ -1,1 +1,0 @@
-import{i as e}from"./game-sushigo-Dg7-JJPb.js";export{e as sushigoLlmSpec};

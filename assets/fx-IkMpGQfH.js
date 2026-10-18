@@ -1,1 +1,0 @@
-import{o as e}from"./game-ghosts-D-X-zlWG.js";export{e as ghostsFx};

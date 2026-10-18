@@ -1,1 +1,0 @@
-import{i as e}from"./game-spiritisland-DjfwKYPS.js";export{e as spiritisland};

@@ -1,1 +1,0 @@
-import{s as e}from"./game-tend-vENcv3lZ.js";export{e as tend};

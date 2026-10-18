@@ -1,1 +1,0 @@
-import{s as e}from"./game-chroniclesofcrime-DIJUulYu.js";export{e as chroniclesOfCrimeBot};

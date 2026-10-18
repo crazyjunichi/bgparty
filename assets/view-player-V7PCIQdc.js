@@ -1,1 +1,0 @@
-import{t as e}from"./game-ninja-DFi6H95H.js";export{e as NinjaPlayerView};

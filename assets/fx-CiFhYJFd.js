@@ -1,1 +1,0 @@
-import{r as e}from"./game-splendor-DcvVBaz0.js";export{e as splendorFx};

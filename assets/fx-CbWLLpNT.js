@@ -1,1 +1,0 @@
-import{o as e}from"./game-mindspace-DIgw8V3N.js";export{e as mindspaceFx};

@@ -1,1 +1,0 @@
-import{c as e,o as t}from"./game-nimmt-C56Rfowf.js";export{t as describeNimmtAction,e as nimmtBot};

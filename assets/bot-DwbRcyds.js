@@ -1,1 +1,0 @@
-import{i as e,r as t}from"./game-carcassonne-Bvub4k_1.js";export{t as carcassonneBot,e as describeCarcassonneAction};

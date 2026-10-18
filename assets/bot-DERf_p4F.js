@@ -1,1 +1,0 @@
-import{i as e,o as t}from"./game-spice-BWTrGd8W.js";export{e as describeSpiceAction,t as spiceBot};

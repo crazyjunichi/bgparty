@@ -1,1 +1,0 @@
-import{c as e,s as t}from"./game-amanite-BdBt5HFS.js";export{t as amaniteBot,e as describeAmaniteAction};

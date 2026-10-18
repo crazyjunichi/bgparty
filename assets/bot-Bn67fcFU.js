@@ -1,1 +1,0 @@
-import{a as e,s as t}from"./game-machikoro2-CcPXLRCT.js";export{e as describeMachiKoro2Action,t as machikoro2Bot};

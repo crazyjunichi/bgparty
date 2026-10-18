@@ -1,1 +1,0 @@
-import{i as e}from"./game-ted-DdmXa8vm.js";export{e as tedFx};

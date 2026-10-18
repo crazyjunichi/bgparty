@@ -1,1 +1,0 @@
-import{l as e,u as t}from"./game-catbox-CVSlDwTo.js";export{e as catboxBot,t as describeCatboxAction};

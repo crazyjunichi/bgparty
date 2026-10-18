@@ -1,1 +1,0 @@
-import{o as e}from"./game-carcassonne-Bvub4k_1.js";export{e as carcassonne};

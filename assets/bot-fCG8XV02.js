@@ -1,1 +1,0 @@
-import{a as e,i as t}from"./game-wingspan-CYCHc9ON.js";export{t as describeWingspanAction,e as wingspanBot};

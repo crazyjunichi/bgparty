@@ -1,1 +1,0 @@
-import{t as e}from"./game-clever-Cm3dA5RS.js";export{e as CleverPlayerView};

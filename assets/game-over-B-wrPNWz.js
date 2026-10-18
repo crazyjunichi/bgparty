@@ -1,1 +1,0 @@
-import{i as e}from"./game-mahjong-3BC1efsw.js";export{e as MahjongGameOver};

@@ -1,1 +1,0 @@
-import{r as e}from"./game-tagiron-Qx1GXBD3.js";export{e as tagironFx};

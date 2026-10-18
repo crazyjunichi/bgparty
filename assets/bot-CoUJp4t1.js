@@ -1,1 +1,0 @@
-import{a as e,i as t}from"./game-camelup-BBPHWdqx.js";export{t as camelupBot,e as describeCamelupAction};
