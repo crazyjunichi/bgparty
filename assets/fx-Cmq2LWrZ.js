@@ -1,0 +1,1 @@
+import{D as e}from"./game-welcome-40-0q4kj.js";export{e as welcomeFx};

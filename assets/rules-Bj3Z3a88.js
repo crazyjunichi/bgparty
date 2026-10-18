@@ -1,0 +1,1 @@
+import{r as e}from"./game-letsgotojapan-mW-CqF1u.js";export{e as letsgotojapan};

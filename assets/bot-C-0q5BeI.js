@@ -1,0 +1,1 @@
+import{o as e,s as t}from"./game-fantasyrealms-DpleVpQn.js";export{e as describeFantasyrealmsAction,t as fantasyrealmsBot};

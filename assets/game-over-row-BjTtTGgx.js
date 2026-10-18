@@ -1,0 +1,1 @@
+import{r as e}from"./game-svea-D3aZUVJ9.js";export{e as SveaGameOverRow};

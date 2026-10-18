@@ -1,0 +1,1 @@
+import{i as e}from"./game-quacks-BlV774NY.js";export{e as quacks};

@@ -1,0 +1,1 @@
+import{t as e}from"./game-spice-BWTrGd8W.js";export{e as SpicePlayerView};

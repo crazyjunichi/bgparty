@@ -1,0 +1,1 @@
+import{o as e,s as t}from"./game-magicalathlete-BLJD_qvP.js";export{e as describeMagicalathleteAction,t as magicalathleteBot};

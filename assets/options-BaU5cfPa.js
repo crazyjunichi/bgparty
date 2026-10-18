@@ -1,0 +1,1 @@
+import{i as e}from"./game-ghosts-D-X-zlWG.js";export{e as GhostsOptions};

@@ -1,0 +1,1 @@
+import{n as e}from"./game-onward-BjOJUMMo.js";export{e as onward};

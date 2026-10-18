@@ -1,0 +1,1 @@
+import{a as e}from"./game-chroniclesofcrime-DIJUulYu.js";export{e as ChroniclesOfCrimeGameOver};

@@ -1,0 +1,1 @@
+import{n as e}from"./game-splendorduel-BAvFK36C.js";export{e as splendorduelFx};

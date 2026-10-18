@@ -1,0 +1,1 @@
+import{t as e}from"./game-spiritisland-DjfwKYPS.js";export{e as SpiritIslandPlayerView};

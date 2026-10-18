@@ -1,0 +1,1 @@
+import{a as e}from"./game-jaipur-uShbXNzC.js";export{e as jaipurFx};

@@ -1,0 +1,1 @@
+import{i as e}from"./game-manila-qkuimEaA.js";export{e as manilaBot};

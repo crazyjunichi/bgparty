@@ -1,0 +1,1 @@
+import{r as e}from"./game-skyteam-B7AVQIcq.js";export{e as skyteamFx};

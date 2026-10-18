@@ -1,0 +1,1 @@
+import{a as e,i as t}from"./game-ninja-DFi6H95H.js";export{t as describeNinjaAction,e as ninjaBot};

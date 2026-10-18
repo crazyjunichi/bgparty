@@ -1,0 +1,1 @@
+import{t as e}from"./game-fastsloths-DCQiH7EP.js";export{e as FastSlothsPlayerView};

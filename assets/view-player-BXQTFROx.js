@@ -1,0 +1,1 @@
+import{t as e}from"./game-wingspan-CYCHc9ON.js";export{e as WingspanPlayerView};

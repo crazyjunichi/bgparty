@@ -1,0 +1,1 @@
+import{O as e,k as t}from"./game-welcome-40-0q4kj.js";export{e as describeWelcomeAction,t as welcomeBot};

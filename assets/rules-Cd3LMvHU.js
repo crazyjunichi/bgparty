@@ -1,0 +1,1 @@
+import{n as e}from"./game-tantrix-5VNoKpBx.js";export{e as tantrix};

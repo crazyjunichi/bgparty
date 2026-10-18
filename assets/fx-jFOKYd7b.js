@@ -1,0 +1,1 @@
+import{r as e}from"./game-projectl-rTgePLSa.js";export{e as projectlFx};

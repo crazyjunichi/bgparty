@@ -1,0 +1,1 @@
+import{c as e,u as t}from"./game-quacks-BlV774NY.js";export{e as describeQuacksAction,t as quacksBot};

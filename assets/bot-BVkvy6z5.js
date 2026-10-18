@@ -1,0 +1,1 @@
+import{a as e,i as t}from"./game-philosophy-D7X1TSr-.js";export{t as describePhilosophyAction,e as philosophyBot};

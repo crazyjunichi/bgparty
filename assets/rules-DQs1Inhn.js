@@ -1,0 +1,1 @@
+import{i as e}from"./game-tagteam-BMtX8P3R.js";export{e as tagteam};

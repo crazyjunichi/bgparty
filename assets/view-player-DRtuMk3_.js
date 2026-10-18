@@ -1,0 +1,1 @@
+import{t as e}from"./game-magicalathlete-BLJD_qvP.js";export{e as MagicalAthletePlayerView};

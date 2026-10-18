@@ -1,0 +1,1 @@
+import{n as e}from"./game-gang-yWVmSTU3.js";export{e as gangFx};

@@ -1,0 +1,1 @@
+import{t as e}from"./game-machikoro2-CcPXLRCT.js";export{e as MachiKoro2PlayerView};

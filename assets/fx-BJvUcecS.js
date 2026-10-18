@@ -1,0 +1,1 @@
+import{o as e}from"./game-chroniclesofcrime-DIJUulYu.js";export{e as chroniclesOfCrimeFx};

@@ -1,0 +1,1 @@
+import{r as e}from"./game-waypoints-BkWYg5Ur.js";export{e as WaypointsOptions};

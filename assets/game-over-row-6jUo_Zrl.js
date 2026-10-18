@@ -1,0 +1,1 @@
+import{r as e}from"./game-doppelt-so-clever-Bb9C6wZX.js";export{e as DoppeltGameOverRow};

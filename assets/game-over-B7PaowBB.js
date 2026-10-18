@@ -1,0 +1,1 @@
+import{r as e}from"./game-heat-CetcUWg7.js";export{e as HeatGameOver};

@@ -1,0 +1,1 @@
+import{n as e}from"./game-ted-DdmXa8vm.js";export{e as TedOptions};

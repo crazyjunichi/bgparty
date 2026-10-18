@@ -1,0 +1,1 @@
+import{t as e}from"./game-parade-KmO3MsvT.js";export{e as ParadePlayerView};

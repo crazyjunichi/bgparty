@@ -1,0 +1,1 @@
+import{i as e}from"./game-heroeswac-DYPa3Y1H.js";export{e as heroeswacBot};

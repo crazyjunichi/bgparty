@@ -1,0 +1,1 @@
+import{i as e}from"./game-salad-Bj4K9s5P.js";export{e as SaladGameOver};

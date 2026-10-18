@@ -1,0 +1,1 @@
+import{t as e}from"./game-codenames-BUODIWdJ.js";export{e as CodenamesPlayerView};

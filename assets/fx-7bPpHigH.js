@@ -1,0 +1,1 @@
+import{r as e}from"./game-herbalism-BiLfoOoR.js";export{e as herbalismFx};

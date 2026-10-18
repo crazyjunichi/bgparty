@@ -1,0 +1,1 @@
+import{r as e}from"./game-cahoots-BpmVAfzw.js";export{e as CahootsGameOver};

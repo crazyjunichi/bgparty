@@ -1,0 +1,1 @@
+import{a as e,o as t}from"./game-stockpile-Rs0GyyP7.js";export{e as describeStockpileAction,t as stockpileBot};

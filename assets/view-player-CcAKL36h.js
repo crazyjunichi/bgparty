@@ -1,0 +1,1 @@
+import{t as e}from"./game-regicide-xx65HNH3.js";export{e as RegicidePlayerView};

@@ -1,0 +1,1 @@
+import{n as e}from"./game-orapa-Dpu0AFGt.js";export{e as orapa};

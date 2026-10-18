@@ -1,0 +1,1 @@
+import{o as e}from"./game-philosophy-D7X1TSr-.js";export{e as philosophy};

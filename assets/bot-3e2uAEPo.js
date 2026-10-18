@@ -1,0 +1,1 @@
+import{r as e}from"./game-caverna-BPrCn3JP.js";export{e as cavernaBot};

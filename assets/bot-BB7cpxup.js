@@ -1,0 +1,1 @@
+import{c as e,u as t}from"./game-ghosts-D-X-zlWG.js";export{e as describeGhostsAction,t as ghostsBot};
