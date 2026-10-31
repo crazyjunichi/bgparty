@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'"><title>Quick start · BGParty</title><style>body{margin:0;background:#faf7ef;color:#2b2118;font:16px/1.8 system-ui,sans-serif}main{max-width:860px;margin:auto;padding:24px}nav{display:flex;flex-wrap:wrap;gap:16px}a{color:#186847;text-underline-offset:4px}h1{font-size:2rem;line-height:1.3}h2{margin-top:2em;font-size:1.4rem}pre{padding:16px;background:#eee9df;border-radius:12px;overflow:auto;line-height:1.6}p,li{overflow-wrap:anywhere}code{font-family:ui-monospace,monospace}li{margin:8px 0}a:focus-visible{outline:3px solid #186847;outline-offset:4px}</style><main><nav><a href="../#/developers">Create your game</a><a href="quickstart.en.html">Quick start</a><a href="API.html">API</a></nav><h1>Quick start</h1>
+<p>Run a playable example first, then turn it into your own board game. The complete kit includes the SDK, examples and guides. Follow the steps below to begin.</p>
+<h2>1. Install and play</h2>
+<p>Install Node.js &gt;=22.18 with npm. Extract the kit and open a terminal in the directory containing package.json.</p>
+<pre><code>node --version
+npm --version
+npm install
+npm run check
+npm run dev</code></pre>
+<p>Initial installation downloads dependencies from npm; node_modules is not included. On Windows, use npm.cmd if PowerShell blocks npm.ps1. Do not double-click HTML or open game ZIPs directly.</p>
+<p>Open the random 127.0.0.1 URL printed in the terminal. Ctrl+C stops the preview. The real sandbox provides seat switching, player counts, one bot action, Chinese/English, rules and restart. The basic example has no options or custom guide, so those buttons are disabled.</p>
+<h2>2. Project files</h2>
+<ul><li>game.json: entry, stable ID, labels, rules, player counts, cover and capabilities.</li><li>src/index.tsx: playable Count to Ten rules, view and bot.</li><li>src/messages.ts: shared example translations and message type augmentation.</li><li>examples/private-cards.tsx: private information, options, SVG assets, rules and results.</li><li>public/cover.svg and public/token.svg: replaceable original sample artwork.</li><li>bgparty-sdk.tgz: matching SDK npm archive; keep it in the project root.</li><li>docs/ and AGENTS.md: manual and AI development guidance.</li><li>.bgparty/release/: generated publishable source, separate from code.</li></ul>
+<h2>3. Try the advanced example</h2>
+<p>Stop the current preview first:</p>
+<pre><code>npm run example -- private-cards
+npm run dev</code></pre>
+<p>Each seat sees only its own card. Switch seats and reveal, or use bot actions, until results appear. Select a maximum in Options and click New game to apply it. Rules opens the guide. Switching language returns to gameplay; reopen options/rules when needed.</p>
+<p>Use npm run example -- basic to return. Selection replaces sample entry, labels, rules, hotseat policy and capability flags; choose before customizing. The examples share a development identity but are different games, not compatible published updates.</p>
+<h2>4. Make it yours</h2>
+<pre><code>npm run rename -- my-game
+npm run check</code></pre>
+<p>Rename updates the ID, translation keys and GameMessages together. Use lowercase letters, digits and hyphens. Keep the ID stable once published. Edit both language labels, rules, counts, search aliases and releasedAt in game.json; use a complete zoned timestamp such as 2026-10-28T12:00:00+08:00. Do not change only the JSON ID.</p>
+<p>Keep bgparty-sdk.tgz when moving the project. Its actual version is recorded in developer-kit.json and node_modules/@bgparty/sdk/package.json.</p>
+<h2>5. Iterate</h2>
+<pre><code>npm run check
+npm run build</code></pre>
+<p>check validates types, metadata and cover presence, not gameplay. dev builds once and starts a preview, without a file watcher. After edits, build in another terminal and refresh, or stop and rerun dev. Refresh starts a new match. Preview is not a multiplayer, installation or save-resume test; its random port is unsuitable for persistence across restarts.</p>
+<p>Next, <a href="ai.en.html">create with AI</a> or <a href="development.en.html">code your game</a>. Use the <a href="API.html">SDK API index</a> to look up interfaces, then <a href="publishing.en.html">publish your game</a> when it is ready.</p>
+<p>For fixed-package acceptance and legal log restoration, see the <a href="development.en.html#fixed-packages-and-log-restoration">development guide</a>.</p></main></html>

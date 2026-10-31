@@ -1,0 +1,28 @@
+{
+  "version": "1.1.1",
+  "sdkApi": 2,
+  "node": ">=22.18.0",
+  "sdk": {
+    "file": "bgparty-sdk-1.1.1.tgz",
+    "bytes": 2306254,
+    "sha256": "21f0d5e9a6b8bed990719c31414251a11aeaaa6b2f8526e6236bf58f12b73be7"
+  },
+  "starter": {
+    "file": "bgparty-developer-kit-1.1.1.zip",
+    "bytes": 2343278,
+    "sha256": "9dd3e6925b36113e1c4348e4819b5d12c72ddbb3bb63eb11f43e2e766690e0c5"
+  },
+  "files": [
+    "bgparty-sdk-1.1.1.tgz",
+    "ai.en.html",
+    "ai.zh.html",
+    "API.html",
+    "development.en.html",
+    "development.zh.html",
+    "publishing.en.html",
+    "publishing.zh.html",
+    "quickstart.en.html",
+    "quickstart.zh.html",
+    "bgparty-developer-kit-1.1.1.zip"
+  ]
+}

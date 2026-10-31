@@ -1,0 +1,139 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'"><title>SDK API / 公共接口 · BGParty</title><style>body{margin:0;background:#faf7ef;color:#2b2118;font:16px/1.8 system-ui,sans-serif}main{max-width:860px;margin:auto;padding:24px}nav{display:flex;flex-wrap:wrap;gap:16px}a{color:#186847;text-underline-offset:4px}h1{font-size:2rem;line-height:1.3}h2{margin-top:2em;font-size:1.4rem}pre{padding:16px;background:#eee9df;border-radius:12px;overflow:auto;line-height:1.6}p,li{overflow-wrap:anywhere}code{font-family:ui-monospace,monospace}li{margin:8px 0}a:focus-visible{outline:3px solid #186847;outline-offset:4px}</style><main><nav><a href="../#/developers">制作你的游戏</a><a href="quickstart.zh.html">快速开始</a><a href="API.html">API</a></nav><h1>SDK API / 公共接口</h1>
+<p>The installed package's declarations are the source for exact signatures. 使用安装包中的类型声明查看完整参数与返回类型；编辑器可直接跳转定义。下方完整模块／出口表由当前 SDK 契约生成，随下载包更新，不根据本仓游戏的引用猜测公共能力。</p>
+<h2>常用入口 / Common entry points</h2>
+<ul><li>@bgparty/sdk/core：defineGame、GameDefinition、种子随机数、规则与 bot 类型。Pure rules, schemas and bots.</li><li>@bgparty/sdk/ui：GameScreen、PlayerStrip、PhaseBanner、DeltaNumber、Texture、界面参数类型。Layout and common view props.</li><li>@bgparty/sdk/i18n、messages：useT、useGameT、语言与 GameMessages 扩展。Localization and message augmentation.</li><li>@bgparty/sdk/assets：gameAssetUrl、sharedAssetUrl。Resolve installed assets to sandbox URLs.</li><li>@bgparty/sdk/storage：readGameStorage、writeGameStorage，要求 sdkApi: 2。Committed local progress with revision conflict handling.</li><li>@bgparty/sdk/icons、player-colors、avatars：平台公开图标、座位色和头像。Public presentation helpers.</li><li>@bgparty/sdk/fx/*、drawing/*、three/*：按需接入演出、绘画与 3D 支持。Optional effects, drawing and resilient 3D.</li></ul>
+<p>核心流程示例见 <a href="development.zh.html">中文开发教程</a> / <a href="development.en.html">English development guide</a>。准确的输入、输出和可选回调以对应 .d.ts 为准；不直接导入 types/ 下的内部路径。</p>
+<p>Game modules run in the host sandbox. 不要在 Node 里执行 SDK 的 empty.mjs。UI/API 1 游戏可继续使用兼容 SDK；采用新存储接口时在 game.json 顶层声明 sdkApi: 2。SDK npm 包版本、最低 API 与游戏存档版本分别维护。</p>
+<h2>Complete module exports / 完整公共出口</h2>
+<h3>@bgparty/sdk/assets</h3>
+<p><code>gameAssetUrl</code>, <code>sharedAssetUrl</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/packages/sdk/src/assets.d.ts</p>
+<h3>@bgparty/sdk/avatars</h3>
+<p><code>AVATARS</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/avatars.d.ts</p>
+<h3>@bgparty/sdk/bot-personality</h3>
+<p><code>botPersonality</code>, <code>BotPersonality</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/bot-personality.d.ts</p>
+<h3>@bgparty/sdk/bottom-sheet</h3>
+<p><code>BottomSheet</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/bottom-sheet.d.ts</p>
+<h3>@bgparty/sdk/confirm-button</h3>
+<p><code>ConfirmButton</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/confirm-button.d.ts</p>
+<h3>@bgparty/sdk/core</h3>
+<p><code>BotCtx</code>, <code>BotDescribe</code>, <code>BotMove</code>, <code>BotThink</code>, <code>defineGame</code>, <code>FxEntry</code>, <code>GameDefinition</code>, <code>GameError</code>, <code>GameMeta</code>, <code>GameStatus</code>, <code>PlayerView</code>, <code>randomIntAt</code>, <code>ReduceCtx</code>, <code>SaveCompatibility</code>, <code>StateWithFx</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/packages/sdk/src/core.d.ts</p>
+<h3>@bgparty/sdk/storage</h3>
+<p><code>GameStorageSnapshot</code>, <code>GameStorageWriteResult</code>, <code>readGameStorage</code>, <code>writeGameStorage</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/packages/sdk/src/storage.d.ts</p>
+<h3>@bgparty/sdk/drawing/canvas</h3>
+<p><code>DrawingPad</code>, <code>SquareBox</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/drawing/canvas.d.ts</p>
+<h3>@bgparty/sdk/drawing/strokes</h3>
+<p><code>CANVAS_SIZE</code>, <code>PALETTE</code>, <code>Stroke</code>, <code>STROKE_WIDTHS</code>, <code>strokeSchema</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/drawing/strokes.d.ts</p>
+<h3>@bgparty/sdk/drawing/view</h3>
+<p><code>DrawingView</code>, <code>StrokePath</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/drawing/view.d.ts</p>
+<h3>@bgparty/sdk/engine/prng</h3>
+<p><code>randomAt</code>, <code>randomIntAt</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/engine/prng.d.ts</p>
+<h3>@bgparty/sdk/fx/anchors</h3>
+<p><code>AnchorBox</code>, <code>FxAnchorsProvider</code>, <code>useFxAnchor</code>, <code>useFxAnchors</code>, <code>useFxAnchorsMaybe</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/fx/anchors.d.ts</p>
+<h3>@bgparty/sdk/fx/delta-number</h3>
+<p><code>DeltaNumber</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/fx/delta-number.d.ts</p>
+<h3>@bgparty/sdk/fx/dice-cube</h3>
+<p><code>D6_SLOT</code>, <code>DICE_FACE_CLASS</code>, <code>DiceCube</code>, <code>diceFaceContent</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/fx/dice-cube.d.ts</p>
+<h3>@bgparty/sdk/fx/dice-roll</h3>
+<p><code>createDiceRollRenderer</code>, <code>DICE_ROLL_MS</code>, <code>DiceParse</code>, <code>DiceSpec</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/fx/dice-roll.d.ts</p>
+<h3>@bgparty/sdk/fx/dice-roll-ms</h3>
+<p><code>DICE_ROLL_MS</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/fx/dice-roll-ms.d.ts</p>
+<h3>@bgparty/sdk/fx/primitives</h3>
+<p><code>Flash</code>, <code>Floater</code>, <code>FlySprite</code>, <code>PulseBox</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/fx/primitives.d.ts</p>
+<h3>@bgparty/sdk/fx/use-reduced-motion</h3>
+<p><code>usePrefersReducedMotion</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/fx/use-reduced-motion.d.ts</p>
+<h3>@bgparty/sdk/game-menu</h3>
+<p><code>GameMenu</code>, <code>GameMenuAction</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/game-menu.d.ts</p>
+<h3>@bgparty/sdk/i18n</h3>
+<p><code>avatarNameAt</code>, <code>I18nKey</code>, <code>I18nVars</code>, <code>Locale</code>, <code>registerGameMessages</code>, <code>registerMessages</code>, <code>translate</code>, <code>useGameT</code>, <code>useI18nSettings</code>, <code>useT</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/packages/sdk/src/i18n.d.ts</p>
+<h3>@bgparty/sdk/icons</h3>
+<p><code>IconAdd</code>, <code>IconBack</code>, <code>IconBell</code>, <code>IconBot</code>, <code>IconCheck</code>, <code>IconClose</code>, <code>IconConnected</code>, <code>IconCopy</code>, <code>IconDisconnected</code>, <code>IconDown</code>, <code>IconDownload</code>, <code>IconEdit</code>, <code>IconEffect</code>, <code>IconExpand</code>, <code>IconExternal</code>, <code>IconEye</code>, <code>IconFlood</code>, <code>IconHint</code>, <code>IconHistory</code>, <code>IconHotseat</code>, <code>IconInfo</code>, <code>IconInstall</code>, <code>IconLang</code>, <code>IconLayoutCompact</code>, <code>IconLayoutCover</code>, <code>IconListen</code>, <code>IconLog</code>, <code>IconMenu</code>, <code>IconMirror</code>, <code>IconMove</code>, <code>IconOptions</code>, <code>IconPile</code>, <code>IconPlay</code>, <code>IconPlayers</code>, <code>IconProps</code>, <code>IconQr</code>, <code>IconRecenter</code>, <code>IconRotate</code>, <code>IconScan</code>, <code>IconSearch</code>, <code>IconSettings</code>, <code>IconShare</code>, <code>IconShoot</code>, <code>IconShuffle</code>, <code>IconSort</code>, <code>IconStar</code>, <code>IconTrap</code>, <code>IconTrash</code>, <code>IconWarning</code>, <code>IconZoomIn</code>, <code>IconZoomOut</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/icons.d.ts</p>
+<h3>@bgparty/sdk/lobby</h3>
+<p><code>botAvatarOf</code>, <code>BotKind</code>, <code>botRidOf</code>, <code>gameResultSchema</code>, <code>GameResultView</code>, <code>isAiBotRid</code>, <code>isBotRid</code>, <code>isLocalRid</code>, <code>lobbyMemberSchema</code>, <code>LobbyMemberView</code>, <code>LobbyUp</code>, <code>lobbyUpSchema</code>, <code>localAvatarOf</code>, <code>localRidOf</code>, <code>RoomView</code>, <code>roomViewSchema</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/lobby/protocol.d.ts</p>
+<h3>@bgparty/sdk/messages</h3>
+<p><code>GameMessages</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/packages/sdk/src/messages.d.ts</p>
+<h3>@bgparty/sdk/player-colors</h3>
+<p><code>PLAYER_COLORS</code>, <code>PlayerColor</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/player-colors.d.ts</p>
+<h3>@bgparty/sdk/polyomino</h3>
+<p><code>cellsOf</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/polyomino.d.ts</p>
+<h3>@bgparty/sdk/runtime</h3>
+<p><code>connectRuntime</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/packages/sdk/src/runtime.d.ts</p>
+<h3>@bgparty/sdk/sfx</h3>
+<p><code>playBell</code>, <code>playGameOver</code>, <code>playSettle</code>, <code>playTurn</code>, <code>previewTurn</code>, <code>TurnSoundId</code>, <code>useSfxSettings</code>, <code>useSoundEdge</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/sfx.d.ts</p>
+<h3>@bgparty/sdk/sheet-geometry</h3>
+<p><code>CircleSpec</code>, <code>gridCell</code>, <code>gridCells</code>, <code>GridSpec</code>, <code>LayoutDump</code>, <code>MarkStyle</code>, <code>SheetRect</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/sheet-geometry.d.ts</p>
+<h3>@bgparty/sdk/sheet-mark</h3>
+<p><code>SheetMark</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/sheet-mark.d.ts</p>
+<h3>@bgparty/sdk/sheet-view</h3>
+<p><code>EligibleCell</code>, <code>SheetFocus</code>, <code>SheetFxProbe</code>, <code>SheetText</code>, <code>SheetView</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/sheet-view.d.ts</p>
+<h3>@bgparty/sdk/team-medal</h3>
+<p><code>TeamMedal</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/team-medal.d.ts</p>
+<h3>@bgparty/sdk/texture</h3>
+<p><code>Texture</code>, <code>TextureKind</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/texture.d.ts</p>
+<h3>@bgparty/sdk/three/resilient-canvas</h3>
+<p><code>ResilientCanvas</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/three/resilient-canvas.d.ts</p>
+<h3>@bgparty/sdk/ui</h3>
+<p><code>DeltaNumber</code>, <code>GameMenuItemsProps</code>, <code>GameOptionsProps</code>, <code>GameOverViewProps</code>, <code>GameScreen</code>, <code>GameViewProps</code>, <code>PhaseBanner</code>, <code>PhaseTone</code>, <code>PlayerStrip</code>, <code>Texture</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/packages/sdk/src/ui.d.ts</p>
+<h3>@bgparty/sdk/ui/confetti</h3>
+<p><code>Confetti</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/games/ui/confetti.d.ts</p>
+<h3>@bgparty/sdk/ui/game-options</h3>
+<p><code>OptionCheckbox</code>, <code>OptionRadio</code>, <code>OptionSection</code>, <code>OptionSwitch</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/games/ui/game-options.d.ts</p>
+<h3>@bgparty/sdk/ui/game-over-screen</h3>
+<p><code>GameOverChime</code>, <code>GameOverScreen</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/games/ui/game-over-screen.d.ts</p>
+<h3>@bgparty/sdk/ui/game-screen</h3>
+<p><code>GameScreen</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/games/ui/game-screen.d.ts</p>
+<h3>@bgparty/sdk/ui/hint-ring</h3>
+<p><code>HintRing</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/games/ui/hint-ring.d.ts</p>
+<h3>@bgparty/sdk/ui/log-sheet</h3>
+<p><code>LogSheet</code>, <code>LogTicker</code>, <code>rich</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/games/ui/log-sheet.d.ts</p>
+<h3>@bgparty/sdk/ui/phase-banner</h3>
+<p><code>PhaseBanner</code>, <code>PhaseTone</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/games/ui/phase-banner.d.ts</p>
+<h3>@bgparty/sdk/ui/player-strip</h3>
+<p><code>PlayerStrip</code>, <code>PlayerStripVariant</code>, <code>SeatBadgedAvatar</code>, <code>seatName</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/games/ui/player-strip.d.ts</p>
+<h3>@bgparty/sdk/use-wake-lock</h3>
+<p><code>useWakeLock</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/use-wake-lock.d.ts</p>
+<h3>@bgparty/sdk/word-list</h3>
+<p><code>default</code></p>
+<p>Declaration / 类型声明：node_modules/@bgparty/sdk/types/src/shared/word-list.d.ts</p></main></html>

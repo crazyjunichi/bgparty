@@ -1,0 +1,13 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'"><title>发布你的游戏 · BGParty</title><style>body{margin:0;background:#faf7ef;color:#2b2118;font:16px/1.8 system-ui,sans-serif}main{max-width:860px;margin:auto;padding:24px}nav{display:flex;flex-wrap:wrap;gap:16px}a{color:#186847;text-underline-offset:4px}h1{font-size:2rem;line-height:1.3}h2{margin-top:2em;font-size:1.4rem}pre{padding:16px;background:#eee9df;border-radius:12px;overflow:auto;line-height:1.6}p,li{overflow-wrap:anywhere}code{font-family:ui-monospace,monospace}li{margin:8px 0}a:focus-visible{outline:3px solid #186847;outline-offset:4px}</style><main><nav><a href="../#/developers">制作你的游戏</a><a href="quickstart.zh.html">快速开始</a><a href="API.html">API</a></nav><h1>发布你的游戏</h1>
+<p>把完成的游戏上传后，你和朋友就可以在 BGParty 中下载并游玩。下面说明需要上传哪些文件、如何添加游戏，以及遇到问题时怎么检查。</p>
+<h2>上传游戏文件</h2>
+<pre><code>npm run check
+npm run build</code></pre>
+<p>把整个 .bgparty/release/ 目录的内容上传到你自己的静态托管空间。根目录的 games.json、games/ 中的游戏 ZIP、全部素材／数据卷和封面都必须上传。不要上传源码、node_modules 或 bgparty-sdk.tgz；游戏源不需要发布运行时 SDK。</p>
+<p>托管必须支持公开 HTTPS、浏览器跨域读取（CORS），而且目录和文件不能要求登录、Cookie 或重定向。对象存储/CDN 可为这些公开文件设置 Access-Control-Allow-Origin: *；访问清单、ZIP 和封面时都要检查响应。文件分享页、临时下载链接通常不能直接作为游戏源。</p>
+<p>在 BGParty 的“设置 → 游戏来源与下载”添加完整目录地址，例如 https://example.com/my-games/games.json。确认游戏出现在列表中，实际下载并开局，再邀请另一台设备验联机。完成下载后检查离线运行。能够在地址栏下载文件，不代表跨域读取已经配置正确。</p>
+<p>构建会维护目录和内容摘要。游戏更新保持同一 ID、同一来源地址，完整上传新快照，先传新 ZIP／资源再替换 games.json，随后撤下不再引用的旧文件。不要修改已发布的带摘要路径中的字节。多游戏源须保留全部游戏的完整目录；不要直接用另一独立项目的 games.json 覆盖已有多游戏目录。</p>
+<h2>常见问题</h2>
+<ul><li>找不到 bgparty-sdk.tgz：重新获取完整开发包并保留根目录文件，不用 sdk.zip 替代；已有项目升级时同步替换 SDK 包并重新安装依赖。</li><li>安装失败或 Node 版本不支持：检查 node --version、npm 网络／代理和完整错误；Windows 可改用 npm.cmd。</li><li>页面出现 games.xxx 字样：使用 rename 命令统一改名，核对 GameMessages、翻译键与 locales 注册的 ID。</li><li>修改源码后没有变化：dev 不监听文件，重新 build 并刷新，或退出后再 dev。</li><li>本机预览不能在手机访问：预览只监听 127.0.0.1；真机联机用 HTTPS 的 BGParty 与已发布游戏源。</li><li>图片空白：核对 public/ 文件、相对 public/ 的别名、大小写和 gameAssetUrl；资源函数不加 resources/ 前缀，不要使用 /public/ 或远程素材 URL。</li><li>选项／规则／机器人入口缺失：核对 game.json 的 capabilities 与实际导出，重新构建。</li><li>外部源加载失败：同时检查目录及 ZIP 的 HTTPS、CORS、无重定向、完整上传，以及清单大小／摘要一致。</li><li>SDK/API 不兼容：查看 game.json 的 sdkApi 与平台版本，更新平台或 SDK；不要只修改数字以绕过限制。</li><li>存档无法恢复：核对 saveCompatibility 与旧版日志，明确不兼容时重新开局，不改写玩家原档强行放行。</li></ul>
+<h2>发布前记录</h2>
+<p>记录游戏 ID、SDK 版本、存档版本、本次改动、已验证的人数／选项／语言／浏览器、联机与离线结果、未验项。声称兼容旧档前，用旧发布版的代表性记录验证进度、资源和结果；当前版本自测不能代替跨版本验证。</p></main></html>

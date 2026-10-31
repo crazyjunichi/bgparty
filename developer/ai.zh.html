@@ -1,0 +1,30 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'"><title>使用 AI 制作游戏 · BGParty</title><style>body{margin:0;background:#faf7ef;color:#2b2118;font:16px/1.8 system-ui,sans-serif}main{max-width:860px;margin:auto;padding:24px}nav{display:flex;flex-wrap:wrap;gap:16px}a{color:#186847;text-underline-offset:4px}h1{font-size:2rem;line-height:1.3}h2{margin-top:2em;font-size:1.4rem}pre{padding:16px;background:#eee9df;border-radius:12px;overflow:auto;line-height:1.6}p,li{overflow-wrap:anywhere}code{font-family:ui-monospace,monospace}li{margin:8px 0}a:focus-visible{outline:3px solid #186847;outline-offset:4px}</style><main><nav><a href="../#/developers">制作你的游戏</a><a href="quickstart.zh.html">快速开始</a><a href="API.html">API</a></nav><h1>使用 AI 制作游戏</h1>
+<p>验收固定成品包时按[制作指南](development.zh.md#固定成品包与日志恢复)使用 SDK 的 <code>bgparty-game accept</code>：不重新构建、不随其他构建切包，各轮使用自己的运行、地址、存储身份、内置浏览器标签页和证据。通过正常页面按钮恢复合法日志，实际操作后记录结果；共享浏览器控制只短时互斥，不串行整个开发任务。服务授权遵守当前工程约定。</p>
+<p>把完整工程文件夹交给可读写本地工程的 AI 编程助手，先让它阅读 AGENTS.md 和 docs/。只有对话能力、不能运行命令的 AI 可以辅助设计和写代码，但安装、构建与浏览器操作需要你自己完成。不需要把 BGParty 主工程交给 AI。</p>
+<h2>提供需求</h2>
+<p>复制以下内容并补齐，附上你有权使用的规则与素材。未确定的规则写“待讨论”，不要让 AI 默默猜测。</p>
+<pre><code>请先阅读 AGENTS.md、README.md 和 docs/ 下的开发说明。
+游戏名称、稳定 ID：
+玩家人数、热座需求：
+玩家每回合能做什么：
+公共信息、每个人的私有信息：
+准备流程、回合流程、结束条件与胜负判定：
+特殊情况、平局、非法操作如何处理：
+开局选项、机器人、成长存储是否需要：
+规则原文或附件：
+美术方向、已有素材：
+验收场景：
+先列出理解和疑问，确认方案后再实现。</code></pre>
+<h2>分阶段推进</h2>
+<p>第一步确认规则和状态／动作／视图模型，明确哪些信息不能给其他玩家。选择示例并统一改名，再实现可玩的纯规则原型。</p>
+<p>第二步让 AI 运行 check 和 build，核对元数据、导出与能力声明，然后在获得所需端口授权后预览，实际完成一局。报错时提供完整终端输出、复现操作和预期结果，不只描述“打不开”。</p>
+<p>第三步完善界面、素材、规则页和双语，验证手机与桌面。优先用 SVG 和现有公开组件；特殊功能先核对 API，不让 AI 私自引入游戏出网或读取宿主信息。</p>
+<p>第四步按<a href="publishing.zh.html">发布说明</a>生成完整游戏源，在 BGParty 验收实际安装、联机、离线和更新。让 AI 汇报已验／未验项，不把生成代码或检查通过说成游戏已通过全部验收。</p>
+<h2>持续迭代提示</h2>
+<pre><code>请先读取当前工程和现有文档，只修改与本次目标有关的内容。
+本次目标：
+需要保留的规则、美术和存档行为：
+复现步骤、实际结果、期望结果：
+请说明受影响文件与存档兼容影响，再实施并运行 check/build。
+最后列出修改文件、实际验证结果和未验证的情形。</code></pre>
+<p>AI 的规则理解和美术生成都需要人工审阅。游戏 ID 发布后保持不变；不要每次改画面就递增存档版本，也不要在规则改变后未经证据声称兼容旧档。</p></main></html>

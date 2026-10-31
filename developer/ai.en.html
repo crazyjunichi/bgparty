@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'"><title>Make a game with AI · BGParty</title><style>body{margin:0;background:#faf7ef;color:#2b2118;font:16px/1.8 system-ui,sans-serif}main{max-width:860px;margin:auto;padding:24px}nav{display:flex;flex-wrap:wrap;gap:16px}a{color:#186847;text-underline-offset:4px}h1{font-size:2rem;line-height:1.3}h2{margin-top:2em;font-size:1.4rem}pre{padding:16px;background:#eee9df;border-radius:12px;overflow:auto;line-height:1.6}p,li{overflow-wrap:anywhere}code{font-family:ui-monospace,monospace}li{margin:8px 0}a:focus-visible{outline:3px solid #186847;outline-offset:4px}</style><main><nav><a href="../#/developers">Create your game</a><a href="quickstart.en.html">Quick start</a><a href="API.html">API</a></nav><h1>Make a game with AI</h1>
+<p>For fixed-package acceptance follow the <a href="development.en.html#fixed-packages-and-log-restoration">development guide</a> and use SDK <code>bgparty-game accept</code>. It does not rebuild or follow mutable build outputs. Each run owns its address, storage identity, connected-browser tab and evidence. Restore legal logs through normal page controls and actually exercise the affected behavior. Coordinate only shared browser controls with short leases; do not serialize entire development tasks. Follow the project's listener authorization policy.</p>
+<p>Give the complete project folder to a coding assistant that can read/edit local files. Ask it to read AGENTS.md and docs/ first. A chat-only AI can help design or write code, but you must perform installation, builds and browser actions. The main BGParty repository is unnecessary.</p>
+<h2>Describe the game</h2>
+<p>Copy and fill this brief, attaching rules and assets you are allowed to use. Mark unclear rules as unresolved instead of asking the AI to silently invent them.</p>
+<pre><code>Read AGENTS.md, README.md and the docs/ development guides first.
+Game name and stable ID:
+Player counts and hotseat requirements:
+Available player actions:
+Public information and each player's private information:
+Setup, turn flow, end conditions and winner determination:
+Special cases, ties and illegal actions:
+Options, rule bots and persistent progress:
+Original rules or attachments:
+Visual direction and supplied assets:
+Acceptance scenarios:
+Explain your understanding and questions before implementation.</code></pre>
+<h2>Work in stages</h2>
+<p>Agree on rules and the state/action/view model, including information privacy. Choose an example, rename together, and implement playable pure rules.</p>
+<p>Run check and build, align metadata and exported capabilities, then preview after obtaining any required port permission. Actually complete a match. For failures, provide terminal output, reproduction steps and expected behavior.</p>
+<p>Improve layouts, assets, rules and both languages. Check mobile/desktop. Prefer SVG and public SDK components. Check contracts before advanced features; do not allow direct game networking or access to host secrets.</p>
+<p>Follow <a href="publishing.en.html">Publishing</a> and verify actual installation, networking, offline use and updates in BGParty. Ask the assistant to distinguish verified cases from untested ones. Generated code or successful compilation is not full game acceptance.</p>
+<h2>Iteration prompt</h2>
+<pre><code>Read the existing project and guides. Change only what this task needs.
+Goal:
+Rules, visual direction and save behavior to preserve:
+Reproduction steps, actual behavior and expected result:
+Explain affected files and save compatibility before changing code.
+Run check/build and report changed files, actual verification and untested cases.</code></pre>
+<p>Review AI-generated rules and art yourself. Keep published IDs stable. Visual-only updates normally retain the save version; rule changes require a compatibility decision backed by old-version evidence.</p></main></html>

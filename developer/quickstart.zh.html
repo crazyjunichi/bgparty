@@ -1,0 +1,30 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'"><title>快速开始 · BGParty</title><style>body{margin:0;background:#faf7ef;color:#2b2118;font:16px/1.8 system-ui,sans-serif}main{max-width:860px;margin:auto;padding:24px}nav{display:flex;flex-wrap:wrap;gap:16px}a{color:#186847;text-underline-offset:4px}h1{font-size:2rem;line-height:1.3}h2{margin-top:2em;font-size:1.4rem}pre{padding:16px;background:#eee9df;border-radius:12px;overflow:auto;line-height:1.6}p,li{overflow-wrap:anywhere}code{font-family:ui-monospace,monospace}li{margin:8px 0}a:focus-visible{outline:3px solid #186847;outline-offset:4px}</style><main><nav><a href="../#/developers">制作你的游戏</a><a href="quickstart.zh.html">快速开始</a><a href="API.html">API</a></nav><h1>快速开始</h1>
+<p>先运行一个可以直接试玩的示例，再把它改成你的桌游。完整开发包已经包含 SDK、示例和教程；跟随下面的步骤即可开始。</p>
+<h2>1. 准备环境</h2>
+<p>安装 Node.js 22.18 或更高版本，包含 npm。解压开发包后，在包含 package.json 的目录打开终端。</p>
+<pre><code>node --version
+npm --version
+npm install
+npm run check
+npm run dev</code></pre>
+<p>首次安装需要联网从 npm 获取依赖；开发包没有预装 node_modules。Windows PowerShell 若禁止运行 npm.ps1，使用 npm.cmd 执行同样命令。不要通过双击 HTML 或打开游戏 ZIP 运行游戏。</p>
+<p>终端会输出随机的 127.0.0.1 预览地址，在本机浏览器打开。Ctrl+C 退出。预览使用正式沙箱，可以换座位、修改人数、让机器人行动、切换中英文、查看规则和重新开局。基础示例无开局选项和专用规则页，对应按钮禁用是正常的。</p>
+<h2>2. 认识文件</h2>
+<ul><li>game.json：入口、稳定 ID、名称、规则、人数、封面、能力声明。</li><li>src/index.tsx：可玩的“数到十”，包含规则、视图和机器人。</li><li>src/messages.ts：两个示例共用的中英文文案及翻译键类型。</li><li>examples/private-cards.tsx：密牌、开局选项、SVG、规则和终局示例。</li><li>public/cover.svg 和 public/token.svg：可替换的封面与内容素材。</li><li>bgparty-sdk.tgz：配套 SDK 的 npm 包，保留在工程根目录。</li><li>docs/、AGENTS.md：手工开发与 AI 制作指南。</li><li>.bgparty/release/：构建后生成的可发布游戏源，不是源码。</li></ul>
+<h2>3. 尝试进阶示例</h2>
+<p>先退出正在运行的预览，再执行：</p>
+<pre><code>npm run example -- private-cards
+npm run dev</code></pre>
+<p>每名玩家只看见自己的密牌。依次换座位并亮牌，或点击机器人行动，完成一局。在“选项”选择牌面上限后点击“重新开局”生效。规则按钮显示玩法说明；语言选择会回到对局视图，需要时再次打开规则或选项。</p>
+<p>使用 npm run example -- basic 切回基础示例。切换会替换入口、示例名称、规则、热座方式和能力声明；开始自定义后不要再切换。两个示例共享同一个开发 ID，但不是互相兼容的正式版本，不应把切换示例作为发布更新。</p>
+<h2>4. 开始自己的游戏</h2>
+<pre><code>npm run rename -- my-game
+npm run check</code></pre>
+<p>此命令同时更新 game.json、源码翻译键和 GameMessages 声明。ID 使用小写字母、数字与连字符，发布后保持稳定。然后修改 game.json 的双语名称、说明、规则、人数、搜索词与 releasedAt；新记录使用带时区的完整日期，例如 2026-10-28T12:00:00+08:00。不要手工只改 ID 而漏掉翻译键。</p>
+<p>保留 SDK 压缩包；复制工程到其他机器时同样携带它。SDK 的实际版本在 developer-kit.json 和安装后的 node_modules/@bgparty/sdk/package.json 中。</p>
+<h2>5. 修改、试玩与构建</h2>
+<pre><code>npm run check
+npm run build</code></pre>
+<p>check 检查 TypeScript、元数据和封面存在性，不检查玩法正确性。dev 会先构建再启动预览，没有自动监听；修改后在另一终端 build 并刷新页面，或退出后重新 dev。刷新会重新开局，不保留任意调试状态。预览当前不含多人联机、安装管理和正式续玩验收；随机端口也不适合验证跨启动的持久化。</p>
+<p>接下来，可以<a href="ai.zh.html">使用 AI 制作</a>，也可以<a href="development.zh.html">编写游戏代码</a>。需要查询接口时查看 <a href="API.html">SDK 接口索引</a>，完成后按指南<a href="publishing.zh.html">发布你的游戏</a>。</p>
+<p>固定成品包验收及合法日志恢复见[制作指南](development.zh.md#固定成品包与日志恢复)。</p></main></html>
